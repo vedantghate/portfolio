@@ -12,4 +12,5 @@ import { HERO_DATA } from '../../constants/profile.constants';
 })
 export class HeroComponent {
   heroData = HERO_DATA;
+  isContactMenuOpen = false;
 }

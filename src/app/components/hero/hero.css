@@ -34,3 +34,35 @@ a[href^="mailto"]:hover {
   box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
   transform: translateY(-2px);
 }
+
+/* hero.component.css */
+
+@keyframes marquee {
+  0% { 
+    transform: translateX(0%); 
+  }
+  100% { 
+    transform: translateX(-100%); 
+  }
+}
+
+.animate-marquee {
+  /* 25 seconds for a smooth, readable scroll. Adjust lower to speed it up. */
+  animation: marquee 25s linear infinite;
+}
+
+/* Base entrance animation for the whole section */
+section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
