@@ -8,6 +8,16 @@ export interface TimelineItem {
   tags?: string[];
 }
 
+export interface Experience {
+  company: string;
+  role: string;
+  duration: string;
+  location: string;
+  skills: string[];
+  details: string[];
+  isFlipped: boolean;
+}
+
 export interface Project {
   title: string;
   description: string;

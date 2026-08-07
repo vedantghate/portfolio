@@ -1,4 +1,4 @@
-import { TimelineItem, Project, SkillCategory, HeroInfo } from '../models/profile.model';
+import { Project, SkillCategory, HeroInfo, Experience, TimelineItem } from '../models/profile.model';
 
 export const HERO_DATA: HeroInfo = {
   name: 'Vedant Ghate',
@@ -10,61 +10,61 @@ export const HERO_DATA: HeroInfo = {
   github: 'github.com/vedantghate'
 };
 
-export const EXPERIENCES: TimelineItem[] = [
+export const EXPERIENCES: Experience[] = [
   {
-    id: 'exp-amazon',
-    title: 'Software Development Engineer',
-    subtitle: 'Amazon',
+    company: 'Amazon',
+    role: 'Software Development Engineer',
+    duration: 'Jul 2024 - Present',
     location: 'Bellevue, WA',
-    period: 'Jul 2024 - Present',
-    bullets: [
-      'Led design and launch of Delivery Status and Address plugins on Amazon\'s Your Orders page, migrating to a federated microservices architecture serving hundreds of millions of orders; redesigned the Retail Order Internal Model to reduce redundant downstream service calls by 30%.',
-      'Designed and executed a phased migration strategy with shadow testing, enabling zero-downtime rollout while transitioning Tier-1 services handling high-volume order traffic.',
-      'Built and scaled monitoring infrastructure for a Tier-1 service across 3 AWS regions using AWS CDK and CloudWatch, improving system observability and reducing incident detection time.',
-      'Resolved a P0 production issue impacting 1.9% of orders, restoring system stability; mitigated a severe XSS vulnerability in payment display flows; fixed order processing bug to unblock marketplace launch.',
-      'Developed a RAG-based knowledge platform using Amazon Bedrock with AI agents to automate incident follow-ups, driving GenAI adoption across 10+ engineering teams.'
+    skills: ['Java', 'TypeScript', 'AWS CDK', 'CloudWatch', 'Amazon Bedrock', 'Microservices', 'RAG'],
+    details: [
+      "Led design and launch of Delivery Status and Address plugins on Amazon's Your Orders page, migrating to a federated microservices architecture serving hundreds of millions of orders; redesigned the Retail Order Internal Model to reduce redundant downstream service calls by 30%.",
+      "Designed and executed a phased migration strategy with shadow testing, enabling zero-downtime rollout while transitioning Tier-1 services handling high-volume order traffic.",
+      "Built and scaled monitoring infrastructure for a Tier-1 service across 3 AWS regions using AWS CDK and CloudWatch, improving system observability and reducing incident detection time.",
+      "Resolved a P0 production issue impacting 1.9% of orders, restoring system stability; mitigated a severe XSS vulnerability in payment display flows; fixed order processing bug to unblock marketplace launch.",
+      "Developed a RAG-based knowledge platform using Amazon Bedrock with AI agents to automate incident follow-ups, driving GenAI adoption across 10+ engineering teams."
     ],
-    tags: ['Java', 'TypeScript', 'AWS CDK', 'CloudWatch', 'Amazon Bedrock', 'Microservices', 'RAG']
+    isFlipped: false
   },
   {
-    id: 'exp-kpmg',
-    title: 'Senior Software Engineer',
-    subtitle: 'KPMG',
+    company: 'KPMG',
+    role: 'Senior Software Engineer',
+    duration: 'Jun 2023 - Jul 2024',
     location: 'Orlando, FL',
-    period: 'Jun 2023 - Jul 2024',
-    bullets: [
-      'Led end-to-end development of enterprise Mergers & Acquisitions platforms using Angular, .NET Core, SQL, and Azure, designing scalable workflows for processing large financial datasets across multiple enterprise client engagements.',
-      'Architected SharePoint provisioning workflows using CSOM, facilitating document management and automating environment setup, and reducing manual configuration time by 40-60%.',
-      'Improved system performance by instrumenting applications with Azure Application Insights, enabling proactive bottleneck detection and improving system reliability in production environments.',
-      'Collaborated with cross-functional stakeholders to translate complex business requirements into scalable technical solutions, driving iterative delivery in an Agile environment.'
+    skills: ['Angular', '.NET Core', 'SQL', 'Azure', 'Application Insights', 'CSOM'],
+    details: [
+      "Led end-to-end development of enterprise Mergers & Acquisitions platforms using Angular, .NET Core, SQL, and Azure, designing scalable workflows for processing large financial datasets across multiple enterprise client engagements.",
+      "Architected SharePoint provisioning workflows using CSOM, facilitating document management and automating environment setup, and reducing manual configuration time by 40-60%.",
+      "Improved system performance by instrumenting applications with Azure Application Insights, enabling proactive bottleneck detection and improving system reliability in production environments.",
+      "Collaborated with cross-functional stakeholders to translate complex business requirements into scalable technical solutions, driving iterative delivery in an Agile environment."
     ],
-    tags: ['Angular', '.NET Core', 'SQL', 'Azure', 'Application Insights', 'CSOM']
+    isFlipped: false
   },
   {
-    id: 'exp-course5',
-    title: 'Analyst & Consultant',
-    subtitle: 'Course5 Intelligence',
+    company: 'Course5 Intelligence',
+    role: 'Analyst & Consultant',
+    duration: 'Jul 2020 - Aug 2021',
     location: 'Mumbai, India',
-    period: 'Jul 2020 - Aug 2021',
-    bullets: [
-      'Core contributor to Course5 Compete, a competitive intelligence SaaS platform; built advanced data visualizations using Angular, D3.js, Highcharts, and Material UI integrated with REST APIs.',
-      'Developed reusable micro-frontend libraries using Nx & Module Federation, driving uniform UX across products.',
-      'Built an article aggregation platform using Angular, Django, and MongoDB, accelerating client delivery timelines by reducing data aggregation and processing latency.'
+    skills: ['Angular', 'D3.js', 'Highcharts', 'Nx', 'Module Federation', 'Django', 'MongoDB'],
+    details: [
+      "Core contributor to Course5 Compete, a competitive intelligence SaaS platform; built advanced data visualizations using Angular, D3.js, Highcharts, and Material UI integrated with REST APIs.",
+      "Developed reusable micro-frontend libraries using Nx & Module Federation, driving uniform UX across products.",
+      "Built an article aggregation platform using Angular, Django, and MongoDB, accelerating client delivery timelines by reducing data aggregation and processing latency."
     ],
-    tags: ['Angular', 'D3.js', 'Highcharts', 'Nx', 'Module Federation', 'Django', 'MongoDB']
+    isFlipped: false
   },
   {
-    id: 'exp-accenture',
-    title: 'Application Development Associate',
-    subtitle: 'Accenture Technology',
+    company: 'Accenture Technology',
+    role: 'Application Development Associate',
+    duration: 'Oct 2018 - Jun 2020',
     location: 'Pune, India',
-    period: 'Oct 2018 - Jun 2020',
-    bullets: [
-      'Developed and maintained a large-scale insurance sales portal across 12 geographies using AngularJS, Spring Boot microservices, and MySQL.',
-      'Achieved 90%+ unit test coverage via TDD practices; managed end-to-end CI/CD pipelines using Jenkins.',
-      'Built a Python-based intelligent automation tool using ML algorithms, reducing manual effort by 97%.'
+    skills: ['AngularJS', 'Spring Boot', 'MySQL', 'Jenkins', 'Python', 'Machine Learning'],
+    details: [
+      "Developed and maintained a large-scale insurance sales portal across 12 geographies using AngularJS, Spring Boot microservices, and MySQL.",
+      "Achieved 90%+ unit test coverage via TDD practices; managed end-to-end CI/CD pipelines using Jenkins.",
+      "Built a Python-based intelligent automation tool using ML algorithms, reducing manual effort by 97%."
     ],
-    tags: ['AngularJS', 'Spring Boot', 'MySQL', 'Jenkins', 'Python', 'Machine Learning']
+    isFlipped: false
   }
 ];
 
