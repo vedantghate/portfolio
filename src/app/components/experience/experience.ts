@@ -25,3 +25,4 @@ export class ExperienceComponent {
     this.experiences[index].isFlipped = !this.experiences[index].isFlipped;
   }
 }
+

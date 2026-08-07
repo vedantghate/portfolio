@@ -1,31 +1,53 @@
-<section id="projects" class="py-16 max-w-4xl mx-auto px-4" aria-labelledby="projects-heading">
-  <h2 id="projects-heading" class="text-3xl font-extrabold text-slate-100 mb-8 border-b border-slate-800 pb-3">
-    {{ 'SECTIONS.PROJECTS' | translate }}
-  </h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<section id="projects" class="py-12 max-w-6xl mx-auto px-4" aria-labelledby="projects-heading">
+  
+  <!-- Section Header (Left-aligned, bottom border, gradient text) -->
+  <div class="mb-10 pb-6 border-b border-slate-800/60 w-full text-left">
+    <h2 id="projects-heading" class="text-3xl md:text-4xl font-extrabold text-white">
+      Featured <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">Projects</span>
+    </h2>
+  </div>
+
+  <!-- Card Grid (Exactly matches the Experience/Skills 2-column layout and gap) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    
     @for (project of projects; track project.title) {
-      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300 flex flex-col justify-between">
+      <!-- Project Card -->
+      <div class="rounded-3xl bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all flex flex-col justify-between">
+        
+        <!-- Top: Content -->
         <div>
-          <h3 class="text-xl font-bold text-slate-100 mb-2">{{ project.title }}</h3>
-          <p class="text-slate-300 text-sm mb-4 leading-relaxed">{{ project.description }}</p>
+          <h3 class="text-2xl font-bold text-white mb-3">{{ project.title }}</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">{{ project.description }}</p>
+          
           @if (project.publication) {
-            <p class="text-xs text-indigo-400 italic mb-4">{{ project.publication }}</p>
+            <p class="text-sm text-indigo-400 italic mb-6">{{ project.publication }}</p>
           }
-        </div>
-        <div>
-          <div class="flex flex-wrap gap-2 mb-4">
+          
+          <!-- Tech Stack Tags (Updated to match the Cyan glassmorphism from Skills) -->
+          <div class="flex flex-wrap gap-2.5 mb-8">
             @for (tech of project.techStack; track tech) {
-              <span class="text-xs font-mono bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded">{{ tech }}</span>
+              <span class="px-3 py-1.5 text-sm font-semibold text-cyan-300 bg-cyan-900/20 border border-cyan-800/30 rounded-lg">
+                {{ tech }}
+              </span>
             }
           </div>
+        </div>
+        
+        <!-- Bottom: Action Links -->
+        <div>
           @if (project.link) {
-            <a [href]="'https://' + project.link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+            <!-- Polished link with a group-hover arrow animation -->
+            <a [href]="'https://' + project.link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-cyan-400 hover:text-cyan-300 transition-colors group/link pt-4 border-t border-slate-800/60 w-full">
               Visit Live Demo
-              <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
             </a>
           }
         </div>
+        
       </div>
     }
+    
   </div>
 </section>

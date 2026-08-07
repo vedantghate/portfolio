@@ -4,18 +4,6 @@ h2 {
   display: inline-block;
 }
 
-/* Subtle accent line under headers */
-h2::after {
-  content: '';
-  position: absolute;
-  width: 40px;
-  height: 3px;
-  bottom: -3px;
-  left: 0;
-  background-color: #6366f1; /* indigo-500 */
-  border-radius: 2px;
-}
-
 /* 3D Flip Utilities */
 .perspective-1000 {
   perspective: 1000px;
