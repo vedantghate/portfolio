@@ -1,0 +1,20 @@
+{
+  "NAV": {
+    "ABOUT": "About",
+    "EXPERIENCE": "Experience",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "EDUCATION": "Education"
+  },
+  "SECTIONS": {
+    "EXPERIENCE": "Work Experience",
+    "SKILLS": "Technical Skills",
+    "PROJECTS": "Featured Projects",
+    "EDUCATION": "Education"
+  },
+  "HERO": {
+    "CONTACT": "Contact Me",
+    "LINKEDIN": "LinkedIn",
+    "GITHUB": "GitHub"
+  }
+}

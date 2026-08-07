@@ -1,0 +1,10 @@
+<section id="experience" class="py-16 max-w-4xl mx-auto px-4" aria-labelledby="experience-heading">
+  <h2 id="experience-heading" class="text-3xl font-extrabold text-slate-100 mb-8 border-b border-slate-800 pb-3">
+    {{ 'SECTIONS.EXPERIENCE' | translate }}
+  </h2>
+  <div class="space-y-6">
+    @for (exp of experiences; track exp.id) {
+      <app-timeline-item [item]="exp" />
+    }
+  </div>
+</section>

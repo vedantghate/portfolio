@@ -1,0 +1,36 @@
+/* skills.component.css */
+.font-mono {
+  transition: background-color 0.2s ease, transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease;
+  display: inline-block;
+}
+
+.font-mono:hover {
+  transform: scale(1.1);
+  background-color: rgba(99, 102, 241, 0.25); /* Indigo tint */
+  color: #fff;
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Optional: Stagger the entrance of skill categories */
+.grid > div {
+  animation: fadeScaleIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.grid > div:nth-child(1) { animation-delay: 0.1s; }
+.grid > div:nth-child(2) { animation-delay: 0.2s; }
+.grid > div:nth-child(3) { animation-delay: 0.3s; }
+.grid > div:nth-child(4) { animation-delay: 0.4s; }
+.grid > div:nth-child(5) { animation-delay: 0.5s; }
+.grid > div:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

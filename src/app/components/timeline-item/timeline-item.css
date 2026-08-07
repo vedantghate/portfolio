@@ -1,0 +1,21 @@
+/* timeline-item.component.css */
+article {
+  animation: slideUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Add a subtle glow to the timeline dot on hover */
+article:hover div[aria-hidden="true"] {
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.8), 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

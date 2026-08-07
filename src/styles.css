@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar and selection CSS */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #0f172a; /* Indigo-500 thumb, Slate-900 track */
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4f46e5;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6366f1;
+}
+
+/* Base selection styling */
+::selection {
+  background-color: rgba(99, 102, 241, 0.3);
+  color: #f8fafc;
+}

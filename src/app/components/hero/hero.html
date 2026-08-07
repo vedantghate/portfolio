@@ -1,0 +1,25 @@
+<section id="about" class="py-24 max-w-4xl mx-auto px-4 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+  <div class="space-y-4 flex-1">
+    <span class="text-sm font-semibold text-indigo-400 uppercase tracking-widest">{{ heroData.name }}</span>
+    <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-100 tracking-tight">
+      {{ heroData.role }} <br/>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-400 to-teal-300">
+        {{ heroData.tagline }}
+      </span>
+    </h1>
+    <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+      {{ heroData.summary }}
+    </p>
+    <div class="pt-4 flex flex-wrap gap-4 justify-center sm:justify-start">
+      <a [href]="'mailto:' + heroData.email" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all shadow-lg shadow-indigo-600/20">
+        {{ 'HERO.CONTACT' | translate }}
+      </a>
+      <a [href]="'https://' + heroData.linkedin" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 font-medium text-sm transition-all">
+        {{ 'HERO.LINKEDIN' | translate }}
+      </a>
+      <a [href]="'https://' + heroData.github" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 font-medium text-sm transition-all">
+        {{ 'HERO.GITHUB' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

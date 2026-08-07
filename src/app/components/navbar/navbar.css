@@ -1,0 +1,15 @@
+/* Adds a smooth drop-down reveal animation for the mobile menu */
+.animate-slide-down {
+  animation: slideDown 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

@@ -1,0 +1,6 @@
+/* 
+  Currently empty as Tailwind CSS handles the root layout utilities 
+  (min-h-screen, bg-slate-950, etc.) 
+  Global base styles like scrollbar and smooth scrolling 
+  are located in src/styles.css.
+*/

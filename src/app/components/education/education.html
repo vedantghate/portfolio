@@ -1,0 +1,10 @@
+<section id="education" class="py-16 max-w-4xl mx-auto px-4" aria-labelledby="education-heading">
+  <h2 id="education-heading" class="text-3xl font-extrabold text-slate-100 mb-8 border-b border-slate-800 pb-3">
+    {{ 'SECTIONS.EDUCATION' | translate }}
+  </h2>
+  <div class="space-y-6">
+    @for (edu of educationList; track edu.id) {
+      <app-timeline-item [item]="edu" />
+    }
+  </div>
+</section>

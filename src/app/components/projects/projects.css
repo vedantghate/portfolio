@@ -1,0 +1,31 @@
+/* projects.component.css */
+.rounded-xl {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+.rounded-xl:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.2);
+}
+
+/* Link underline animation for the "Visit Live Demo" text */
+a.text-cyan-400 {
+  position: relative;
+  text-decoration: none;
+}
+a.text-cyan-400::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #22d3ee; /* cyan-400 */
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+a.text-cyan-400:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
