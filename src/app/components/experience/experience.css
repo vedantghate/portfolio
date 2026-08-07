@@ -40,3 +40,69 @@ h2 {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(99, 102, 241, 0.8); 
 }
+
+/* 3D Flip Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari fallback */
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* --- Fix for Glassmorphism Bleed-Through --- */
+/* Crossfades the faces exactly halfway through the 700ms rotation */
+
+.front-face {
+  /* Handles hover effects instantly (0s), but delays the opacity fade by 300ms */
+  transition: opacity 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition-delay: 0.3s, 0s, 0s; 
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-face {
+  transition: opacity 0.15s ease;
+  transition-delay: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* When the parent container rotates, swap the opacities */
+.rotate-y-180 .front-face {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rotate-y-180 .back-face {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Custom Webkit Scrollbar for the Back Face */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.5); 
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.5); 
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8); 
+}
