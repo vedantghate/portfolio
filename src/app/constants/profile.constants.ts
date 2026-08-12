@@ -99,20 +99,68 @@ export const SKILLS: SkillCategory[] = [
 export const PROJECTS: Project[] = [
   {
     title: 'UScholar',
-    description: 'Interactive visual analytics platform for exploring university datasets.',
+    description:
+      'Interactive visual analytics platform for exploring university datasets through dynamic data visualizations.',
     techStack: ['Angular', 'D3.js'],
     link: 'uscholar.vercel.app'
   },
   {
     title: 'Carbon Footprint Calculator',
-    description: 'Full-stack app for tracking CO2 emissions.',
-    techStack: ['Angular', 'Node.js'],
+    description:
+      'Interactive web application for calculating and tracking carbon emissions across different activities and lifestyle factors.',
+    techStack: ['Angular', 'TypeScript'],
     link: 'cfc-env.vercel.app'
   },
   {
     title: 'Distributed Load Balancer',
-    description: 'Render-farm style task distribution.',
+    description:
+      'Distributed task scheduling and load-balancing system inspired by render-farm architectures for efficiently distributing computational workloads.',
     techStack: ['Python'],
     publication: 'Published in IEI Technical Journal Vol. 41, Nov. 2017'
+  },
+  {
+    title: 'API Authentication Demo',
+    description:
+      'Full-stack authentication playground demonstrating API keys, Basic Authentication, Bearer tokens, JWT, OAuth 2.0, OpenID Connect, HMAC signatures, and mutual TLS.',
+    techStack: ['Angular', 'Node.js', 'Express', 'JWT', 'HMAC'],
+    link: 'api-auth-demo-one.vercel.app'
+  },
+  {
+    title: 'Pet Adopt',
+    description:
+      'Pet adoption web application for browsing and discovering dogs available for adoption through an interactive Angular interface.',
+    techStack: ['Angular', 'TypeScript'],
+    link: 'petadopt.vercel.app'
+  },
+  {
+    title: 'Mantra JApp',
+    description:
+      'Angular-based web application for mantra chanting, providing a dedicated interactive web experience.',
+    techStack: ['Angular', 'TypeScript'],
+    link: 'mantrajap.vercel.app'
+  },
+  {
+    title: 'Canny Edge Detection',
+    description:
+      'From-scratch implementation of the Canny edge-detection pipeline including Gaussian filtering, gradient computation, non-maximum suppression, and hysteresis thresholding.',
+    techStack: ['Python', 'NumPy', 'OpenCV']
+  },
+  {
+    title: 'Worm Propagation Simulator',
+    description:
+      'Network-security simulation modeling random-scanning and sequential-scanning Internet worm propagation, with infection growth tracked and visualized over time.',
+    techStack: ['Python', 'Simulation', 'Matplotlib']
+  },
+  {
+    title: 'Cache Hierarchy Simulator',
+    description:
+      'Configurable L1/L2 cache simulator supporting LRU, pseudo-LRU, and optimal replacement policies along with inclusive and non-inclusive cache hierarchies.',
+    techStack: ['Python', 'Computer Architecture']
+  },
+  {
+    title: 'Branch Predictor Simulator',
+    description:
+      'Branch-prediction simulator implementing Smith, bimodal, GShare, and hybrid prediction algorithms for analyzing processor branch behavior.',
+    techStack: ['Python', 'Computer Architecture']
   }
 ];
