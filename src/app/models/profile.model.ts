@@ -40,3 +40,11 @@ export interface HeroInfo {
   linkedin: string;
   github: string;
 }
+
+export interface LeadershipItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  tags: string[];
+}

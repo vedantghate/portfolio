@@ -1,4 +1,4 @@
-import { Project, SkillCategory, HeroInfo, Experience, TimelineItem } from '../models/profile.model';
+import { Project, SkillCategory, HeroInfo, Experience, TimelineItem, LeadershipItem } from '../models/profile.model';
 
 export const HERO_DATA: HeroInfo = {
   name: 'Vedant Ghate',
@@ -162,5 +162,32 @@ export const PROJECTS: Project[] = [
     description:
       'Branch-prediction simulator implementing Smith, bimodal, GShare, and hybrid prediction algorithms for analyzing processor branch behavior.',
     techStack: ['Python', 'Computer Architecture']
+  }
+];
+
+export const LEADERSHIP: LeadershipItem[] = [
+  {
+    id: 'technical-leadership',
+    title: 'Technical Leadership',
+    subtitle: 'Architecture & Scale',
+    description:
+      'Led the design and launch of customer-facing services and drove a federated microservices architecture supporting hundreds of millions of orders, while reducing redundant downstream service calls by 30%.',
+    tags: ['System Design', 'Microservices', 'AWS']
+  },
+  {
+    id: 'operational-excellence',
+    title: 'Operational Excellence',
+    subtitle: 'Reliability & Resilience',
+    description:
+      'Led resolution of a P0 production incident affecting 1.9% of orders and strengthened observability and reliability across Tier-1 services deployed across 3 AWS regions.',
+    tags: ['Reliability', 'Observability', 'AWS CDK']
+  },
+  {
+    id: 'cross-team-impact',
+    title: 'Cross-Team Impact',
+    subtitle: 'GenAI & Engineering Enablement',
+    description:
+      'Built a RAG-based knowledge platform using Amazon Bedrock and AI agents, driving adoption of reusable GenAI capabilities across 10+ engineering teams.',
+    tags: ['GenAI', 'RAG', 'Amazon Bedrock']
   }
 ];

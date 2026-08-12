@@ -2,12 +2,14 @@
   "NAV": {
     "ABOUT": "Sobre mí",
     "EXPERIENCE": "Experiencia",
+    "LEADERSHIP": "Liderazgo & Impacto",
     "SKILLS": "Habilidades",
     "PROJECTS": "Proyectos",
     "EDUCATION": "Educación"
   },
   "SECTIONS": {
     "EXPERIENCE": "Experiencia Laboral",
+    "LEADERSHIP": "Experiencia de Liderazgo & Impacto",
     "SKILLS": "Habilidades Técnicas",
     "PROJECTS": "Proyectos Destacados",
     "EDUCATION": "Educación"

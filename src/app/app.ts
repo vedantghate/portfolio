@@ -7,6 +7,7 @@ import { ExperienceComponent } from './components/experience/experience';
 import { SkillsComponent } from './components/skills/skills';
 import { ProjectsComponent } from './components/projects/projects';
 import { EducationComponent } from './components/education/education';
+import { LeadershipComponent } from './components/leadership/leadership';
 
 
 @Component({
@@ -17,6 +18,7 @@ import { EducationComponent } from './components/education/education';
     NavbarComponent,
     HeroComponent,
     ExperienceComponent,
+    LeadershipComponent,
     SkillsComponent,
     ProjectsComponent,
     EducationComponent
